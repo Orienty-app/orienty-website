@@ -160,7 +160,7 @@
 
         async function init() {
             try {
-                const rawUrl = 'https://orienty-app.github.io/orienty-red/status.json';
+                const rawUrl = '/status.json';
                 
                 // On ajoute un timestamp pour éviter que le navigateur garde une vieille version en cache
                 const response = await fetch(rawUrl + '?t=' + Date.now());

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/status.json"
+  to = "https://orienty-app.github.io/orienty-red/status.json"
+  status = 200
+  force = true

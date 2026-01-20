@@ -13,7 +13,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@orientyfr" />
     <meta property="og:url" content="https://orienty.fr" />
-    <meta property="og:title" content="Orienty - Trouve des réponses à tes questions d'orientation" />
+    <meta property="og:title" content="Orienty | Orientation Scolaire: Échange avec des Étudiants" />
     <meta name="description" content="Ne choisis pas ton école au hasard. Orienty te connecte gratuitement avec des étudiants vérifiés pour discuter de Parcoursup, des écoles et de ton avenir." /><meta name="description" content="Ne choisis pas ton école au hasard. Orienty te connecte gratuitement avec des étudiants vérifiés pour discuter de Parcoursup, des écoles et de ton avenir." />
     <meta property="og:image" content="https://www.orienty.fr/twitter-image.png" />
 
@@ -22,6 +22,39 @@
     <link rel="stylesheet" href="./home.css">
     <link rel="icon" href="/logo.png" type="image/png">
     <link rel="icon" href="/Assets/Logo.png" type="image/png">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Orienty",
+        "url": "https://orienty.fr",
+        "logo": "https://orienty.fr/Assets/Logo.png", 
+        "description": "Plateforme d'entraide et d'orientation scolaire permettant aux lycéens de discuter gratuitement et sans filtre avec des étudiants sur leurs parcours.",
+        "sameAs": [
+            "https://www.instagram.com/orienty_app",
+            "https://www.linkedin.com/company/orienty"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services d'orientation",
+            "itemListElement": [
+            {
+                "@type": "Service",
+                "name": "Mise en relation lycéens-étudiants",
+                "description": "Échanges directs et gratuits pour découvrir la réalité des filières d'études supérieures.",
+                "serviceType": "Orientation Scolaire",
+                "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+                }
+            }
+            ]
+        },
+        "keywords": "orientation scolaire, parcoursup, témoignages étudiants, aide orientation, choix d'études"
+        }
+    </script>
 
 
     <script>
@@ -198,7 +231,7 @@
         <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-6 py-3 shadow-sm flex justify-between items-center relative">
 
             <a href="#" class="flex items-center gap-3 z-50 group">
-                <img src="./Assets/LogoSVG.png" onerror="this.src='https://placehold.co/40x40'" alt="Logo Orienty" class="w-10 h-10 object-contain rounded-xl group-hover:rotate-12 transition duration-300">
+                <img src="./Assets/LogoSVG.png" onerror="this.src='https://placehold.co/40x40'" alt="Logo Orienty - Plateforme d'orientation scolaire" class="w-10 h-10 object-contain rounded-xl group-hover:rotate-12 transition duration-300">
                 <span class="text-xl font-bold tracking-tight">Orienty</span>
             </a>
 
@@ -247,8 +280,8 @@
                     </div>
 
                     <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight">
-                        Ton avenir <br>
-                        <span class="text-gradient">sans le filtre.</span>
+                        L'orientation scolaire <br>
+                        <span class="text-gradient">sans filtre par des étudiants.</span>
                     </h1>
 
                     <p class="text-lg text-gray-500 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed">
@@ -596,6 +629,44 @@
                 </div>
             </div>
         </section>
+
+<!--         <section id="ressources" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <span class="text-accent font-bold text-xs tracking-widest uppercase mb-2 block">Guides & Conseils</span>
+                <h2 class="text-4xl font-bold">Tout pour réussir ton <br><span class="text-gradient">orientation scolaire</span></h2>
+            </div>
+            <a href="#" class="hidden md:block text-sm font-bold border-b-2 border-black pb-1 hover:text-accent hover:border-accent transition">Voir tous les guides</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="/guides/parcoursup-2025.html" class="group">
+                <div class="aspect-video rounded-3xl bg-pastel-blue/20 mb-4 overflow-hidden relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-4xl group-hover:scale-110 transition duration-500">📝</div>
+                </div>
+                <h3 class="font-bold text-xl mb-2 group-hover:text-accent transition">Parcoursup 2025 : 5 conseils pour tes vœux</h3>
+                <p class="text-gray-500 text-sm">Découvre comment maximiser tes chances d'être accepté dans la filière de ton choix...</p>
+            </a>
+
+            <a href="/guides/choisir-licence-droit.html" class="group">
+                <div class="aspect-video rounded-3xl bg-pastel-purple/20 mb-4 overflow-hidden relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-4xl group-hover:scale-110 transition duration-500">⚖️</div>
+                </div>
+                <h3 class="font-bold text-xl mb-2 group-hover:text-accent transition">Faire son Droit : La réalité des étudiants</h3>
+                <p class="text-gray-500 text-sm">Charge de travail, matières, débouchés... On te dit tout ce qui n'est pas dans les brochures.</p>
+            </a>
+
+            <a href="/guides/devenir-mentor.html" class="group">
+                <div class="aspect-video rounded-3xl bg-pastel-green/20 mb-4 overflow-hidden relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-4xl group-hover:scale-110 transition duration-500">🤝</div>
+                </div>
+                <h3 class="font-bold text-xl mb-2 group-hover:text-accent transition">Pourquoi devenir mentor sur Orienty ?</h3>
+                <p class="text-gray-500 text-sm">Valorise ton parcours et aide les lycéens à trouver leur voie. Une expérience unique pour ton CV.</p>
+            </a>
+        </div>
+    </div>
+</section> -->
 
         <footer class="bg-white py-12 border-t border-gray-100 mt-auto">
             <div class="container mx-auto px-6 flex flex-col items-center">

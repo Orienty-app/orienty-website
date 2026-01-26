@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.app.orienty.orienty", 
+      "sha256_cert_fingerprints": [
+        "60:0C:11:5A:27:E7:08:98:38:1E:60:13:D3:14:EB:C0:93:14:66:5B:B1:DE:E2:1B:99:0F:28:24:B2:6F:23:82"
+      ]
+    }
+  }
+]

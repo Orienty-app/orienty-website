@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T02:50:27.406Z",
+  "lastUpdated": "2026-02-19T02:52:35.123Z",
   "systemStatus": "ok",
   "maintenance": {
     "active": false,
@@ -17,11 +17,11 @@
       "history": [
         1,
         1,
-        1,
         0,
         0,
         1,
         0,
+        1,
         1,
         1,
         1,
@@ -63,9 +63,9 @@
       "displayUrl": "Supabase EU",
       "icon": "⚡",
       "status": "ok",
-      "uptime": "97%",
+      "uptime": "100%",
       "history": [
-        0,
+        1,
         1,
         1,
         1,

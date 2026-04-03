@@ -3,8 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.app.orienty.orienty", 
+      "package_name": "com.orienty.app",
       "sha256_cert_fingerprints": [
+        "16:60:9F:E7:91:17:FC:10:08:41:84:BC:94:3E:41:9A:1B:3B:D6:A3:C4:DA:93:FD:EC:62:4F:E0:DF:AD:27:89",
         "60:0C:11:5A:27:E7:08:98:38:1E:60:13:D3:14:EB:C0:93:14:66:5B:B1:DE:E2:1B:99:0F:28:24:B2:6F:23:82"
       ]
     }

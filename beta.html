@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécharger la Bêta Publique - Orienty</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Polices Sora & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="./Assets/Logo.png" type="image/png">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#F7F7F9',
+                        accent: '#5384FD',
+                        surface: '#FFFFFC',
+                        pastel: {
+                            green: '#caffbf',
+                            yellow: '#fdffb6',
+                            red: '#ffadad',
+                            blue: '#a0c4ff',
+                            purple: '#bdb2ff',
+                            cyan: '#9bf6ff',
+                            orange: '#ffd6a5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Sora"', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'xl': '14px',
+                        '2xl': '20px',
+                        '3xl': '32px',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #FFFFFC; 
+            color: #000000; 
+            overflow-x: hidden; 
+            font-family: 'Sora', sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #000000 30%, #5384FD 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-pastel-blue selection:text-black flex flex-col min-h-screen">
+
+    <!-- Bandeau Bêta Publique -->
+    <div class="fixed top-0 left-0 w-full h-10 bg-black text-white z-[60] flex items-center justify-center px-4">
+        <p class="text-xs font-bold tracking-wide flex items-center gap-2">
+            🚀 La bêta publique d'Orienty est ouverte à tous !
+        </p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-12 px-4">
+        <div class="max-w-5xl mx-auto bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-6 py-3 shadow-sm flex justify-between items-center relative">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="./Assets/LogoSVG.png" onerror="this.src='./Assets/Logo.png'" alt="Logo Orienty"
+                    class="w-10 h-10 object-contain rounded-xl group-hover:rotate-12 transition duration-300">
+                <span class="text-xl font-bold tracking-tight">Orienty <span class="text-xs bg-pastel-green/40 text-green-900 font-semibold px-2 py-0.5 rounded-full ml-1">Bêta Publique</span></span>
+            </a>
+            <a href="index.html" class="text-sm font-bold bg-secondary px-4 py-2 rounded-xl hover:bg-black hover:text-white transition-colors duration-300">
+                Retour au site
+            </a>
+        </div>
+    </nav>
+
+    <!-- En-tête / Hero -->
+    <main class="flex-grow flex flex-col items-center justify-center px-6 pt-36 pb-20 relative overflow-hidden">
+        <!-- Blobs d'arrière-plan -->
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-pastel-blue rounded-full blur-[110px] opacity-35 -z-10 animate-float"></div>
+        <div class="absolute top-1/3 -right-32 w-96 h-96 bg-pastel-purple rounded-full blur-[110px] opacity-30 -z-10 animate-float" style="animation-delay: -3s;"></div>
+
+        <div class="max-w-3xl mx-auto text-center space-y-8 animate-slide-up">
+            
+            <!-- Badge Statut -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-gray-200/80 text-xs font-bold shadow-sm">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                </span>
+                <span>Accès libre • Plus besoin d'invitation privée</span>
+            </div>
+
+            <!-- Titre Principal -->
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+                Installe Orienty dès maintenant en <span class="text-gradient">Bêta Publique</span>.
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-500 font-medium max-w-xl mx-auto leading-relaxed font-body">
+                Échange gratuitement avec des étudiants vérifiés sur Parcoursup et leurs écoles. Choisis ta plateforme pour commencer le test :
+            </p>
+
+            <!-- Cartes / Boutons de téléchargement -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4 max-w-2xl mx-auto text-left">
+                
+                <!-- Carte iOS / TestFlight -->
+                <a href="https://testflight.apple.com/join/mj7MECFG" target="_blank" rel="noopener noreferrer"
+                   class="group relative bg-black text-white p-6 rounded-3xl hover:bg-zinc-900 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/10 transition-all duration-300 flex flex-col justify-between overflow-hidden border border-black">
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center group-hover:scale-110 transition duration-300">
+                            <!-- Logo Apple -->
+                            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.05.05-2.31.74-3.03 1.63-.64.79-1.2 2.04-1.06 3.16 1.18.09 2.37-.84 3.02-1.68z"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider bg-white/15 px-3 py-1 rounded-full text-zinc-300">
+                            iOS (iPhone)
+                        </span>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-gray-400 block mb-1">Rejoindre via Apple</span>
+                        <div class="text-2xl font-bold flex items-center justify-between">
+                            TestFlight
+                            <svg class="w-5 h-5 -translate-x-1 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 font-body font-normal">Nécessite l'application TestFlight gratuite sur l'App Store.</p>
+                    </div>
+                </a>
+
+                <!-- Carte Android / Google Play Store -->
+                <a href="https://play.google.com/store/apps/details?id=com.orienty.app" target="_blank" rel="noopener noreferrer"
+                   class="group relative bg-white text-black p-6 rounded-3xl hover:border-black hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-gray-200">
+                    <div class="flex items-start justify-between mb-8">
+                        <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center group-hover:scale-110 transition duration-300">
+                            <!-- Logo Google Play -->
+                            <svg class="w-6 h-6" viewBox="0 0 24 24">
+                                <path fill="#000000" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider bg-secondary px-3 py-1 rounded-full text-gray-600">
+                            Android
+                        </span>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-gray-400 block mb-1">Disponible sur</span>
+                        <div class="text-2xl font-bold flex items-center justify-between text-gray-900">
+                            Google Play
+                            <svg class="w-5 h-5 -translate-x-1 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2 font-body font-normal">Accès direct au canal bêta ouvert sur le Play Store.</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Bloc QR Code Desktop avec Toggle OS -->
+            <div class="hidden md:inline-flex flex-col items-center bg-white p-5 rounded-3xl border border-gray-100 shadow-sm mt-8">
+                <div class="flex gap-2 mb-4 bg-secondary p-1 rounded-xl">
+                    <button id="btn-ios" onclick="switchQR('ios')" class="px-4 py-1.5 rounded-lg text-xs font-bold bg-white text-black shadow-sm transition">TestFlight (iOS)</button>
+                    <button id="btn-android" onclick="switchQR('android')" class="px-4 py-1.5 rounded-lg text-xs font-bold text-gray-500 hover:text-black transition">Play Store (Android)</button>
+                </div>
+                <div class="p-2 border border-gray-100 rounded-2xl bg-white">
+                    <img id="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://testflight.apple.com/join/mj7MECFG&color=000000&margin=0" alt="QR Code" class="w-36 h-36 rounded-xl">
+                </div>
+                <p class="text-xs text-gray-400 font-semibold mt-3">Scanne avec l'appareil photo de ton téléphone</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Orienty standard -->
+    <footer class="bg-white py-12 border-t border-gray-100 mt-auto">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <div class="flex gap-6 mb-8">
+                <a href="https://www.instagram.com/orientyfr" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:scale-110 transition duration-300 shadow-sm text-gray-600">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                </a>
+                <a href="https://www.tiktok.com/@orientyfr" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:scale-110 transition duration-300 shadow-sm text-gray-600">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.35-1.08 1.08-1.15 1.81-.06.57.05 1.13.29 1.67.61.99 1.98 1.56 3.15 1.36 1.17-.18 2.13-1.12 2.24-2.29.02-.83.01-1.66.01-2.49.01-4.27 0-8.54.01-12.81 2.4-.02 4.8-.02 7.2-.02z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/105849233/" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:scale-110 transition duration-300 shadow-sm text-gray-600">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                </a>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-6 mb-8 text-sm font-bold text-gray-500">
+                <a href="status.html" class="hover:text-black hover:underline transition-all duration-300">Status</a>
+                <span class="text-gray-300 hidden sm:inline">•</span>
+                <a href="help.html" class="hover:text-black hover:underline transition-all duration-300">Centre d'aide</a>
+                <span class="text-gray-300 hidden sm:inline">•</span>
+                <a href="legal/cgu.html#privacy" class="hover:text-black hover:underline transition-all duration-300">Confidentialité</a>
+                <span class="text-gray-300 hidden sm:inline">•</span>
+                <a href="legal/cgu.html#cgu" class="hover:text-black hover:underline transition-all duration-300">CGU</a>
+            </nav>
+            <p class="text-xs text-gray-400 font-medium">&copy; 2025 Orienty. Made in BZH with ❤️ and ☕</p>
+        </div>
+    </footer>
+
+    <!-- Script de changement de QR Code -->
+    <script>
+        const qrLinks = {
+            ios: 'https://testflight.apple.com/join/mj7MECFG',
+            android: 'https://play.google.com/store/apps/details?id=com.orienty.app'
+        };
+
+        function switchQR(type) {
+            const qrImg = document.getElementById('qr-img');
+            const btnIos = document.getElementById('btn-ios');
+            const btnAndroid = document.getElementById('btn-android');
+
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(qrLinks[type])}&color=000000&margin=0`;
+
+            if (type === 'ios') {
+                btnIos.className = "px-4 py-1.5 rounded-lg text-xs font-bold bg-white text-black shadow-sm transition";
+                btnAndroid.className = "px-4 py-1.5 rounded-lg text-xs font-bold text-gray-500 hover:text-black transition";
+            } else {
+                btnAndroid.className = "px-4 py-1.5 rounded-lg text-xs font-bold bg-white text-black shadow-sm transition";
+                btnIos.className = "px-4 py-1.5 rounded-lg text-xs font-bold text-gray-500 hover:text-black transition";
+            }
+        }
+    </script>
+</body>
+</html>

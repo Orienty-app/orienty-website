@@ -31,14 +31,26 @@
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "NGO",
         "name": "Orienty",
+        "legalName": "ORIENTY",
+        "identifier": "W563015792",
         "url": "https://orienty.fr",
-        "logo": "https://orienty.fr/Assets/Logo.png", 
-        "description": "Plateforme d'entraide et d'orientation scolaire permettant aux lycéens de discuter gratuitement et sans filtre avec des étudiants sur leurs parcours.",
+        "logo": "https://orienty.fr/Assets/Logo.png",
+        "foundingDate": "2026-03-13",
+        "description": "Association loi 1901 ayant pour objet de faciliter l'orientation scolaire par la mise en relation directe entre lycéens et étudiants.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "32 allée Joachim du Bellay",
+            "postalCode": "56880",
+            "addressLocality": "Ploeren",
+            "addressRegion": "Morbihan",
+            "addressCountry": "FR"
+        },
         "sameAs": [
-            "https://www.instagram.com/orienty_app",
-            "https://www.linkedin.com/company/orienty"
+            "https://www.instagram.com/orientyfr",
+            "https://www.tiktok.com/@orientyfr",
+            "https://www.linkedin.com/company/105849233/"
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -47,7 +59,7 @@
             {
                 "@type": "Service",
                 "name": "Mise en relation lycéens-étudiants",
-                "description": "Échanges directs et gratuits pour découvrir la réalité des filières d'études supérieures.",
+                "description": "Échanges directs, bénévoles et gratuits pour découvrir la réalité des filières d'études supérieures sans filtre.",
                 "serviceType": "Orientation Scolaire",
                 "offers": {
                 "@type": "Offer",
@@ -57,7 +69,7 @@
             }
             ]
         },
-        "keywords": "orientation scolaire, parcoursup, témoignages étudiants, aide orientation, choix d'études"
+        "keywords": "association orientation, parcoursup, témoignages étudiants, aide orientation, choix d'études, mentorat étudiant"
         }
     </script>
 
@@ -939,15 +951,25 @@
                     <div class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm cursor-pointer hover:border-black transition duration-300 group"
                         onclick="toggleFaq(this)">
                         <div class="flex justify-between items-center">
-                            <h3 class="font-bold text-lg pr-4">📅 C'est dispo quand ?</h3>
+                            <h3 class="font-bold text-lg pr-4">📅 Je peux tester Orienty dès maintenant ?</h3>
                             <span class="text-2xl faq-icon group-hover:scale-110 transition">+</span>
                         </div>
                         <div class="faq-content">
                             <p class="text-gray-500 text-sm leading-relaxed">
-                                Très bientôt ! L'application est en phase finale de développement 🛠️. On peaufine les
-                                derniers détails pour que l'expérience soit parfaite. Reviens vite !<br><br>
-                                N'hésite pas à nous rejoindre sur les réseaux sociaux pour en savoir plus sur l'avancée
-                                d'Orienty. 🚀
+                                Oui ! 🎉 La bêta publique d'Orienty est maintenant ouverte à tout le monde.
+                                <br><br>
+                                Tu peux télécharger l'application dès maintenant via
+                                <a href="https://testflight.apple.com/join/mj7MECFG" target="_blank" rel="noopener noreferrer"
+                                    class="font-semibold text-black underline hover:no-underline">
+                                    TestFlight sur iOS
+                                </a>
+                                ou le
+                                <a href="https://play.google.com/store/apps/details?id=com.orienty.app" target="_blank" rel="noopener noreferrer"
+                                    class="font-semibold text-black underline hover:no-underline">
+                                    Play Store sur Android
+                                </a>.
+                                <br><br>
+                                Rejoins la bêta, découvre Orienty et fais-nous tes retours pour nous aider à améliorer l'expérience ! 🚀
                             </p>
                         </div>
                     </div>

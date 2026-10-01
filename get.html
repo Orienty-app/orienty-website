@@ -39,14 +39,19 @@
 </head>
 <body class="bg-[#FAFAFA] text-black min-h-screen flex flex-col font-sans">
 
-    <nav class="w-full py-6 px-6 relative z-10">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2 font-bold text-xl tracking-tight hover:opacity-80 transition">
-                <div class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center">O</div>
-                Orienty
+    <nav class="fixed w-full z-50 top-10 px-4">
+        <div
+            class="max-w-7xl mx-auto bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-6 py-3 shadow-sm flex justify-between items-center relative">
+
+            <a href="../index.html" class="flex items-center gap-3 z-50 group">
+                <img src="/Assets/LogoSVG.png" onerror="this.src='https://placehold.co/40x40'" alt="Logo Orienty"
+                    class="w-10 h-10 object-contain rounded-xl group-hover:rotate-12 transition duration-300">
+                <span class="text-xl font-bold tracking-tight">Orienty
             </a>
-            <a href="index.html" class="text-sm font-semibold text-gray-500 hover:text-black transition">
-                Retour
+
+            <a href="../index.html"
+                class="text-sm font-bold bg-secondary px-4 py-2 rounded-xl hover:bg-black hover:text-white transition-colors duration-300">
+                Retour au site
             </a>
         </div>
     </nav>

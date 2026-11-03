@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!--
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡿⠛⠋⡍⠻⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣅⠀⠀⠳⢴⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣧⡀⢀⣾⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣽⣿⠇⢸⢷⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣥⣀⣚⣭⣾⡟⠀⠀⠀⠈⠉⠙⠛⠶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⢀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡾⠋⠻⣿⣿⠿⠿⠋⠁⠀⠀⠀⠀⠈⠂⢀⠀⠀⠀⠙⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⣠⣶⡶⠛⠋⠉⣉⠟⠻⢿⣦⣄⠀⠀⠀⣰⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⢀⣾⡟⡅⢈⣠⣭⣿⣶⣦⣄⡀⠙⣿⣆⠀⢰⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⣾⠯⠴⣱⣿⡿⠃⠀⠀⠈⠙⢿⣄⠈⣿⡆⠘⣿⣧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⠟⣫⣵⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⢠⡟⠀⢰⣿⡟⠀⠀⠀⠀⠀⠀⠀⠙⣧⠸⣿⡀⠻⣿⢿⣿⢷⣶⣶⣶⣶⣶⣶⣶⡶⠾⠟⣛⣫⣭⠶⠛⣽⢰⣽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⢤⠦⠤⠤⣄⡀
+    ⣼⣧⠀⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⠹⣇⠀⢙⣿⣟⡷⠶⠶⠶⠶⠶⢶⣶⣾⣿⣿⣿⣿⣿⡷⠾⢛⣿⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⢉⡠⠚⠀⠀⠰⣏⠀
+    ⣿⢸⠀⢹⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣇⢈⡿⣻⡟⠉⠙⠛⠶⠶⢤⣤⣤⣤⣤⣤⣤⣤⣤⡴⠶⠾⠛⠁⠈⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠐⠋⢀⣤⣴⠖⠒⠚⠃
+    ⢿⡜⠀⢺⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣟⣫⡾⠋⠀⠀⠀⠀⣠⣴⠿⠀⠀⠀⠀⠀⠀⠀⢠⣄⡀⠀⠀⠀⠀⠀⠹⣦⠀⠀⠀⠀⠀⠀⠀⠀⢿⡎⠀⡞⣼⠁⠀⠀⠀⠀
+    ⠸⣷⡀⠀⠛⠿⣧⣤⣀⣀⡀⠀⠀⠀⢀⣼⠿⠋⠀⠀⠀⠀⠀⠘⠉⠀⠀⣀⡀⠀⠀⠀⢀⣀⣈⡉⠓⠀⠀⠀⠀⢰⡀⠈⢷⡄⠀⠀⠀⠀⠀⠀⢸⣷⠀⢧⢿⡀⠀⠀⠀⠀
+    ⠀⠈⠻⠶⣦⣤⣄⣈⣙⢍⡻⣦⢶⣶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠛⠉⠙⢻⣆⣴⢟⠉⠉⠻⣦⠀⠀⠀⠀⠀⢣⠀⠀⢻⣄⣀⣀⠀⠀⠀⢸⡟⡄⠘⢾⣷⡀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠉⠉⠉⢻⡞⣿⡿⠁⠊⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⢀⣾⣿⣛⡆⣿⣷⣿⣏⣷⠀⣹⡇⠀⠀⠀⠀⠀⢣⡀⠀⢻⣯⢏⢳⡶⠞⣏⡵⠃⠀⠈⢻⡇⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⢤⢏⣾⡟⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣷⠀⠻⠿⠟⢁⣿⣯⡛⠛⢃⣠⡿⠀⠀⠀⠀⠀⠀⠀⠑⠄⠀⢻⡎⠦⣿⣆⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠠⠂⠀⠀⠀⠹⢷⣦⣤⣴⠿⠃⠈⠛⠛⠛⠋⠀⠀⣆⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⢸⣿⡀⠀⠀⠀⣠⡾⠁⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⣼⣿⡇⢀⣴⡿⠿⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠛⣿⡁⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣶⠿⠛⠻⠛⠉⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠟⠀⠀⠀⠀⠀⠀⢀⡤⠄⣼⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣷⣄⣀⠀⠀⢀⣀⣠⣴⠟⠉⠀⠀⠀⠀⠀⣠⠞⠁⠀⣼⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣦⡀⠀⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠛⠛⠛⢋⠉⠀⠀⠀⠀⠀⠀⢀⣾⠟⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣦⡀⠀⠙⡄⠀⠀⠀⠀⠀⠀⠀⠀⠘⠲⠶⠿⠋⠀⠀⠀⠀⠀⠀⢠⡟⢁⣠⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢹⡿⣷⣦⣜⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⠟⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣌⡙⠿⡿⡿⣶⣶⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣴⡶⠾⠟⠋⣩⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⣦⣭⣉⣒⡚⠋⠉⠉⠉⠉⢉⣉⣉⣂⣠⣤⡶⠾⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠛⠛⠛⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  418 : I'm a teapot.
+  Tu as ouvert le code source. Respect.
+  Le protocole HTCPCP (RFC 2324) date du 1er avril 1998 !
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>418 – Orienty</title>
+    <meta name="description" content="Erreur 418 : le serveur refuse de préparer du café, car c’est une théière.">
+    <link rel="icon" href="/Assets/Logo.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #000000;
+            --surface: #FFFFFC;
+            --secondary: #F7F7F9;
+            --accent: #5384FD;
+            --pastel-blue: #a0c4ff;
+            --pastel-pink: #ffc6ff;
+            --pastel-yellow: #fdffb6;
+            --muted: #6b7280;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body { height: 100%; }
+
+        body {
+            margin: 0;
+            font-family: "Sora", system-ui, sans-serif;
+            background: var(--surface);
+            color: var(--black);
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        ::selection { background: var(--pastel-blue); color: var(--black); }
+
+        /* Barre du haut, comme sur le site */
+        header {
+            padding: 1.25rem 1rem;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            color: inherit;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            margin-left: max(0px, calc((100vw - 80rem) / 2));
+            padding-left: 1rem;
+        }
+
+        .brand img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 14px;
+            transition: transform .3s;
+        }
+
+        .brand:hover img { transform: rotate(12deg); }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1.5rem 2rem;
+        }
+
+        /* Bulle de dialogue de la théière */
+        .bubble {
+            position: relative;
+            min-height: 3.25rem;
+            max-width: 22rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .8rem 1.25rem;
+            background: var(--pastel-yellow);
+            border: 2px solid var(--black);
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: .95rem;
+            line-height: 1.35;
+            margin-bottom: 1.25rem;
+        }
+
+        .bubble::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -11px;
+            width: 18px;
+            height: 18px;
+            background: var(--pastel-yellow);
+            border-right: 2px solid var(--black);
+            border-bottom: 2px solid var(--black);
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .bubble.pop { animation: pop .35s cubic-bezier(.34, 1.56, .64, 1); }
+
+        @keyframes pop {
+            from { transform: scale(.85); opacity: .4; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* La théière */
+        .teapot {
+            width: min(420px, 94vw);
+            height: auto;
+            overflow: visible;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .teapot .line {
+            stroke: var(--black);
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .teapot .body {
+            transform-box: fill-box;
+            transform-origin: 50% 100%;
+            transition: transform .9s cubic-bezier(.4, 0, .2, 1);
+        }
+        .teapot.shake .body { animation: shake .6s ease-in-out; }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0); }
+            15% { transform: rotate(-7deg); }
+            35% { transform: rotate(6deg); }
+            55% { transform: rotate(-4deg); }
+            75% { transform: rotate(2deg); }
+        }
+
+        .eyes { animation: blink 5s infinite; transform-box: fill-box; transform-origin: center; }
+
+        @keyframes blink {
+            0%, 94%, 100% { transform: scaleY(1); }
+            97% { transform: scaleY(.1); }
+        }
+
+        .steam path {
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 4;
+            stroke-linecap: round;
+            opacity: 0;
+            animation: steam 3s ease-in-out infinite;
+        }
+
+        .steam path:nth-child(2) { animation-delay: 1s; }
+        .steam path:nth-child(3) { animation-delay: 2s; }
+
+        @keyframes steam {
+            0% { transform: translateY(14px); opacity: 0; }
+            30% { opacity: .9; }
+            100% { transform: translateY(-16px); opacity: 0; }
+        }
+
+        .steam { transition: opacity .4s; }
+        .teapot.lift .steam { opacity: 0; }
+
+        .shadow { fill: rgba(0, 0, 0, .08); }
+
+        /* Visage : sévère par défaut, souriant pendant la tournée */
+        .teapot .happy { display: none; }
+        .teapot.joy .happy { display: inline; }
+        .teapot.joy .stern { display: none; }
+
+        /* La tournée : la tasse arrive de la gauche, la théière penche et verse */
+        .teapot.lift .body { transform: translateY(-40px); }
+        .teapot.pour .body { transform: translateY(-40px) rotate(28deg); }
+
+        .cup {
+            transform: translateX(-1400px);
+            transition: transform 1.6s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .teapot.serve .cup { transform: none; }
+
+        .coffee {
+            transform: translateY(46px);
+            transition: transform 2.8s linear;
+        }
+
+        .teapot.fill .coffee { transform: translateY(7px); }
+
+        .stream {
+            fill: none;
+            stroke: #d9a441;
+            stroke-width: 5;
+            stroke-linecap: round;
+            transform-box: fill-box;
+            transform-origin: 50% 0%;
+            transform: scaleY(0);
+            transition: transform .35s ease-out;
+        }
+
+        .teapot.pouring .stream { transform: scaleY(1); }
+
+
+        /* Texte */
+        .code {
+            display: inline-block;
+            margin: 1.75rem 0 1rem;
+            padding: .35rem .9rem;
+            background: var(--secondary);
+            border: 1px solid #e5e7eb;
+            border-radius: 999px;
+            font-size: .8rem;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        h1 {
+            margin: 0 0 .75rem;
+            font-size: clamp(2rem, 6vw, 3.25rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .lead {
+            margin: 0 auto 2rem;
+            max-width: 30rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+
+        .lead strong { color: var(--black); }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .75rem;
+        }
+
+        .btn {
+            font: inherit;
+            font-size: .9rem;
+            font-weight: 700;
+            padding: .7rem 1.5rem;
+            border-radius: 14px;
+            border: 2px solid var(--black);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .25s, color .25s, border-color .25s, transform .15s;
+        }
+
+        .btn:active { transform: scale(.97); }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .btn-primary { background: var(--black); color: #fff; }
+        .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+        .btn-ghost { background: transparent; color: var(--black); }
+        .btn-ghost:hover { background: var(--pastel-blue); }
+
+        .tries {
+            margin-top: 1.25rem;
+            min-height: 1.2rem;
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 1.5rem 1rem 2rem;
+            text-align: center;
+            font-size: .75rem;
+            font-weight: 500;
+            color: #9ca3af;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .steam path { opacity: .6; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a class="brand" href="/">
+            <img src="/Assets/LogoSVG.png" alt="" onerror="this.style.display='none'">
+            Orienty
+        </a>
+    </header>
+
+    <main>
+        <div class="bubble" id="bubble" aria-live="polite">Tu veux un café ? Eh bien non.</div>
+
+        <svg class="teapot" id="teapot" viewBox="-40 0 420 250" role="img"
+            aria-label="Une théière au regard sévère, qui refuse de préparer du café">
+            <ellipse class="shadow" cx="150" cy="232" rx="88" ry="9" />
+
+            <g class="steam">
+                <path d="M274 72 q-8 -10 0 -20 q8 -10 0 -20" />
+                <path d="M288 74 q-8 -10 0 -20 q8 -10 0 -20" />
+                <path d="M260 74 q-8 -10 0 -20 q8 -10 0 -20" />
+            </g>
+
+            <g class="body">
+                <!-- anse -->
+                <path class="line" d="M80 128 C28 112 22 192 86 190" fill="none" />
+                <!-- bec -->
+                <path class="line" d="M222 132 C252 128 266 112 270 90 L288 94 C286 128 258 160 224 168 Z"
+                    fill="#a0c4ff" />
+                <!-- corps -->
+                <path class="line"
+                    d="M68 152 C68 106 104 90 150 90 C196 90 232 106 232 152 C232 198 200 224 150 224 C100 224 68 198 68 152 Z"
+                    fill="#a0c4ff" />
+                <!-- couvercle -->
+                <path class="line" d="M104 94 C110 70 190 70 196 94 Z" fill="#FFFFFC" />
+                <circle class="line" cx="150" cy="66" r="8" fill="#000" />
+
+                <!-- visage -->
+                <g class="stern eyes">
+                    <circle cx="124" cy="154" r="5.5" fill="#000" />
+                    <circle cx="176" cy="154" r="5.5" fill="#000" />
+                </g>
+                <path class="line stern" d="M112 138 L136 144 M188 138 L164 144" fill="none" />
+                <path class="line stern" d="M134 182 Q150 174 166 182" fill="none" />
+                <path class="line happy" d="M113 158 Q124 143 135 158 M165 158 Q176 143 187 158" fill="none" />
+                <path class="line happy" d="M124 172 Q150 204 176 172 Z" fill="#fff" />
+                <circle cx="106" cy="172" r="9" fill="#ffc6ff" opacity=".85" />
+                <circle cx="194" cy="172" r="9" fill="#ffc6ff" opacity=".85" />
+            </g>
+
+            <defs>
+                <clipPath id="cupClip">
+                    <path d="M-28 0 H28 V20 C28 38 16 46 0 46 C-16 46 -28 38 -28 20 Z" />
+                </clipPath>
+            </defs>
+
+            <!-- filet de café -->
+            <path class="stream" d="M330 128 V190" />
+
+            <!-- la tasse -->
+            <g transform="translate(330 182)">
+                <g class="cup">
+                    <path class="line" d="M27 8 C50 6 50 34 25 33" fill="none" />
+                    <ellipse class="line" cx="0" cy="50" rx="38" ry="5" fill="#ffc6ff" />
+                    <path d="M-28 0 H28 V20 C28 38 16 46 0 46 C-16 46 -28 38 -28 20 Z" fill="#fff" />
+                    <g clip-path="url(#cupClip)">
+                        <rect class="coffee" x="-28" y="0" width="56" height="46" fill="#d9a441" />
+                    </g>
+                    <path class="line" d="M-28 0 H28 V20 C28 38 16 46 0 46 C-16 46 -28 38 -28 20 Z" fill="none" />
+                    <path class="line" d="M-6 4 Q-14 -6 -24 -8" fill="none" style="stroke-width:2.5" />
+                    <rect class="line" x="-32" y="-18" width="12" height="12" rx="2" fill="#fdffb6"
+                        transform="rotate(-20 -26 -12)" style="stroke-width:2.5" />
+                </g>
+            </g>
+        </svg>
+
+        <span class="code">Erreur 418</span>
+        <h1>Je suis une théière.</h1>
+       <p class="lead">
+            Désolé, cette théière ne prépare pas de café ! <br>
+            <strong class="text-black font-semibold">Tu cherches encore ta voie ?</strong> Prends une grande inspiration, fais infuser ton projet et laisse la communauté Orienty te guider.
+        </p>
+
+        <div class="actions">
+            <button class="btn btn-primary" id="brew" type="button">Insister pour un café</button>
+            <a class="btn btn-ghost" href="/">Retourner à l’accueil</a>
+        </div>
+        <p class="tries" id="tries" aria-live="polite"></p>
+    </main>
+
+    <footer>
+        Protocole HTCPCP, RFC 2324. Made in BZH, avec du thé et des 🥞
+    </footer>
+
+    <script>
+        const refusals = [
+            "Non.",
+            "Non. J'ai dit que j'étais une théière, pas une machine à café.",
+            "C'est fou cette obsession pour le café chez les humains.",
+            "Même en demandant gentiment, c’est non.",
+            "Mon bec est fait pour le thé, pas pour ton expresso.",
+            "Bon. Tu as fini d'essayer de me convertir ?"
+        ];
+        const firstWords = "Tu veux un café ? Eh bien non.";
+
+        const bubble = document.getElementById("bubble");
+        const teapot = document.getElementById("teapot");
+        const tries = document.getElementById("tries");
+        const brew = document.getElementById("brew");
+        let count = 0, busy = false, done = false;
+
+        const wait = ms => new Promise(r => setTimeout(r, ms));
+
+        function say(text) {
+            bubble.textContent = text;
+            bubble.classList.remove("pop");
+            void bubble.offsetWidth; // relance l’animation
+            bubble.classList.add("pop");
+        }
+
+        function refuse() {
+            say(refusals[count]);
+            count++;
+            tries.textContent = count === 1 ? "1 refus" : count + " refus";
+            teapot.classList.remove("shake");
+            void teapot.offsetWidth;
+            teapot.classList.add("shake");
+        }
+
+        async function treat() {
+            busy = true;
+            brew.disabled = true;
+            teapot.classList.remove("shake");
+            teapot.classList.add("joy", "serve");
+            say("Voilà. On infuse des idées ici, pas du café. 🍵");
+            tries.textContent = count + " refus, puis une tournée de thé offerte";
+
+            await wait(1900);
+            teapot.classList.add("lift");
+            await wait(900);
+            teapot.classList.add("pour");
+            await wait(1000);
+            teapot.classList.add("pouring", "fill");
+            say("Voilà, avec le sourire.");
+
+            await wait(3000);
+            teapot.classList.remove("pouring");
+            await wait(500);
+            teapot.classList.remove("pour");
+            await wait(700);
+            teapot.classList.remove("lift");
+            say("Du thé, évidemment !");
+
+            await wait(900);
+            busy = false;
+            done = true;
+            brew.disabled = false;
+            brew.textContent = "Merci !";
+        }
+
+        function reset() {
+            teapot.classList.remove("joy", "serve", "lift", "pour", "pouring", "fill");
+            count = 0;
+            done = false;
+            say(firstWords);
+            tries.textContent = "";
+            brew.textContent = "Insister pour un café";
+        }
+
+        function next() {
+            if (busy) return;
+            if (done) return reset();
+            if (count < refusals.length) refuse();
+            else treat();
+        }
+
+        brew.addEventListener("click", next);
+        teapot.addEventListener("click", next);
+
+        // Pour les curieux qui ouvrent la console
+        console.log(
+            "%c" + String.raw`
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣘⣿⣿⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⣀⣀⡀⠀⠀⠀⢀⣀⠘⠛⠛⠛⠛⠛⠛⠁⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⢠⡿⠋⠉⠛⠃⣠⣤⣈⣉⡛⠛⠛⠛⠛⠛⠛⢛⣉⣁⣤⣄⠀⠀⣾⣿⡿⠗⠀
+                ⠀⢸⡇⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⣿⣿⠀⠀⠀
+                ⠀⢸⣇⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢉⣉⣠⣿⣿⡀⠀⠀
+                ⠀⠀⠙⠷⡆⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⢰⣿⣿⣿⣿⣿⡇⠀⠀
+                ⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠸⣿⣿⣿⣿⠟⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠈⠉⠁⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢄⣉⠉⠛⠛⠛⠛⠛⠋⢉⣉⡠⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⠿⠿⠿⠿⠿⠿⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            `,
+        );
+        console.log("%c418 : I’m a teapot.", "font: 700 16px Sora, sans-serif;");
+        console.log("Tu cherches du café ? Pas ici. Mais si tu aimes fouiller, le RFC 2324 date du 1er avril 1998 et il est toujours valide.");
+    </script>
+</body>
+
+</html>

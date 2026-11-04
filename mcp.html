@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
     
-    <title>Serveur MCP & Connecteurs IA - Orienty</title>
+    <title>Orienty sur ChatGPT & Connecteurs IA</title>
     <link rel="icon" href="./Assets/Logo.png" type="image/png">
 
     <script>
@@ -88,24 +88,25 @@
             <a href="index.html" class="flex items-center gap-3 group">
                 <img src="./Assets/LogoSVG.png" onerror="this.src='./Assets/Logo.png'" alt="Logo Orienty"
                     class="w-10 h-10 object-contain rounded-xl group-hover:rotate-12 transition duration-300">
-                <span class="text-xl font-bold tracking-tight">Orienty <span class="text-xs bg-pastel-purple/40 text-purple-900 font-semibold px-2 py-0.5 rounded ml-1 ml-1">MCP & IA</span></span>
+                <span class="text-xl font-bold tracking-tight">Orienty <span class="text-xs bg-pastel-cyan/60 text-teal-900 font-semibold px-2 py-0.5 rounded ml-1">ChatGPT & IA</span></span>
             </a>
             <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-500">
-                <a href="#install" class="hover:text-black transition">Installation</a>
                 <a href="#chatgpt" class="hover:text-black transition">ChatGPT</a>
-                <a href="#tools" class="hover:text-black transition">Outils</a>
+                <a href="#tools" class="hover:text-black transition">Fonctionnalités</a>
                 <a href="#prompts" class="hover:text-black transition">Exemples</a>
+                <a href="#install" class="hover:text-black transition">Avancé (MCP)</a>
             </div>
-            <a href="index.html" class="text-sm font-bold bg-secondary px-4 py-2 rounded-xl hover:bg-black hover:text-white transition-colors duration-300">
-                Retour au site
+            <a href="https://chatgpt.com/plugins/plugin_asdk_app_6abe46f12798819185265710cec8939d" target="_blank" rel="noopener noreferrer" class="text-sm font-bold bg-black text-white px-4 py-2 rounded-xl hover:bg-accent transition-colors duration-300 inline-flex items-center gap-2">
+                <span>Ouvrir ChatGPT</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
         </div>
     </nav>
 
     <!-- Hero Header -->
     <header class="relative pt-36 pb-16 overflow-visible text-center px-6">
-        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-pastel-blue rounded-full blur-[110px] opacity-30 -z-10 animate-float"></div>
-        <div class="absolute top-1/3 -right-32 w-96 h-96 bg-pastel-purple rounded-full blur-[110px] opacity-30 -z-10 animate-float" style="animation-delay: -3s;"></div>
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-pastel-cyan rounded-full blur-[110px] opacity-40 -z-10 animate-float"></div>
+        <div class="absolute top-1/3 -right-32 w-96 h-96 bg-pastel-blue rounded-full blur-[110px] opacity-40 -z-10 animate-float" style="animation-delay: -3s;"></div>
 
         <div class="max-w-3xl mx-auto space-y-6 animate-slide-up">
             <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-gray-200/80 text-xs font-bold shadow-sm">
@@ -113,157 +114,67 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                 </span>
-                <span>Model Context Protocol</span>
+                <span>Disponible sur ChatGPT</span>
             </div>
 
             <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-                Connecte ton IA aux données d'<span class="text-gradient">Orienty.</span>
+                Utilise Orienty directement dans <span class="text-gradient">ChatGPT.</span>
             </h1>
 
             <p class="text-base sm:text-lg text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed font-body">
-                Interroge Orienty directement depuis Claude Desktop, ChatGPT ou ton IDE préféré.
+                Pose tes questions sur les formations, les portes ouvertes et contacte des étudiants mentors vérifiés sans quitter ton assistant IA.
             </p>
 
-            <!-- URL Endpoint Box -->
-            <div class="max-w-xl mx-auto bg-white border border-gray-100 rounded-2xl p-3 shadow-md flex items-center justify-between gap-3">
-                <div class="text-left font-mono text-xs sm:text-sm text-gray-600 truncate pl-3" id="endpoint-url">
-                    https://orienty-mcp.orienty.workers.dev/mcp
-                </div>
-                <button onclick="copyEndpoint()" id="copy-btn" class="bg-black text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-accent transition duration-200 flex-shrink-0">
-                    Copier
-                </button>
+            <!-- Bouton d'action principal -->
+            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://chatgpt.com/plugins/plugin_asdk_app_6abe46f12798819185265710cec8939d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto bg-black text-white text-base font-bold px-8 py-4 rounded-2xl hover:bg-accent hover:scale-105 transition-all duration-300 shadow-xl flex items-center justify-center gap-3">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 716 716"
+                            fill="none">
+                            <path d="M508.749 317.399C516.777 287.314 508.991 253.884 485.389 230.282C461.788 206.681 428.36 198.895 398.273 206.923C376.231 184.928 343.39 174.956 311.148 183.596C278.906 192.234 255.45 217.292 247.36 247.361C217.291 255.451 192.233 278.91 183.595 311.149C174.957 343.391 184.927 376.232 206.924 398.274C198.896 428.359 206.683 461.789 230.284 485.391C253.885 508.992 287.313 516.779 317.401 508.75C339.442 530.745 372.286 540.717 404.525 532.079C436.767 523.441 460.223 498.384 468.313 468.315C498.383 460.224 523.44 436.766 532.078 404.526C540.716 372.285 530.747 339.443 508.749 317.402V317.399ZM470.899 244.776C486.892 260.77 493.488 282.601 490.687 303.412L415.577 260.046C412.411 258.218 408.509 258.218 405.345 260.046L317.401 310.82V277.526C317.401 275.191 318.652 273.005 320.676 271.837L387.644 233.174C414.178 218.353 448.346 222.223 470.901 244.776H470.899ZM357.837 311.144L398.275 334.491V381.185L357.837 404.532L317.398 381.185V334.491L357.837 311.144ZM264.776 269.693C265.207 239.305 285.644 211.649 316.453 203.393C338.3 197.54 360.505 202.744 377.127 215.573L302.014 258.937C298.848 260.764 296.898 264.144 296.898 267.798V369.346L268.065 352.699C266.043 351.531 264.776 349.353 264.776 347.017V269.691V269.693ZM203.391 316.454C209.244 294.608 224.854 277.978 244.276 269.999V356.73C244.276 360.384 246.226 363.763 249.392 365.591L337.337 416.365L308.503 433.013C306.481 434.181 303.961 434.188 301.939 433.02L234.971 394.357C208.868 378.789 195.138 347.261 203.391 316.454ZM244.775 470.9C228.781 454.906 222.186 433.075 224.986 412.264L300.096 455.63C303.263 457.457 307.164 457.457 310.328 455.63L398.273 404.856V438.149C398.273 440.485 397.022 442.671 394.997 443.839L328.029 482.502C301.495 497.322 267.327 493.452 244.772 470.9H244.775ZM450.897 445.982C450.466 476.371 430.029 504.027 399.22 512.283C377.373 518.136 355.168 512.932 338.547 500.102L413.659 456.738C416.826 454.911 418.775 451.532 418.775 447.877V346.329L447.609 362.977C449.631 364.145 450.897 366.323 450.897 368.659V445.985V445.982ZM512.282 399.221C506.429 421.068 490.819 437.697 471.397 445.676V358.946C471.397 355.292 469.448 351.912 466.281 350.085L378.336 299.311L407.17 282.663C409.192 281.495 411.712 281.487 413.734 282.655L480.702 321.318C506.805 336.887 520.536 368.415 512.282 399.221Z"
+                                fill="white"/>
+                        </svg>
+
+                        <span>Ajouter à ChatGPT en 1 clic</span>
+                    </a>
             </div>
+            <p class="text-xs text-gray-400 font-medium">100% Gratuit • Aucun compte requis</p>
         </div>
     </header>
 
     <main class="container mx-auto px-6 max-w-6xl space-y-24 mb-24 flex-grow">
 
-        <!-- Section 1 : C'est quoi un MCP ? -->
+        <!-- Section 1 : Pourquoi utiliser le plugin ? -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-secondary border border-gray-100 rounded-3xl p-8 relative overflow-hidden group hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-2xl shadow-sm mb-4">🔌</div>
-                <h3 class="text-xl font-bold mb-2">Un standard ouvert</h3>
-                <p class="text-gray-500 text-sm leading-relaxed font-body">Le <strong>Model Context Protocol (MCP)</strong> permet aux modèles d'IA de se brancher directement sur des sources de données fiables et des outils externes.</p>
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-2xl shadow-sm mb-4">🚀</div>
+                <h3 class="text-xl font-bold mb-2">Accès instantané</h3>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">Connecte les données Orienty à ChatGPT sans aucune installation complexe ni configuration requise.</p>
             </div>
             <div class="bg-secondary border border-gray-100 rounded-3xl p-8 relative overflow-hidden group hover:shadow-lg transition">
                 <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-2xl shadow-sm mb-4">⚡</div>
                 <h3 class="text-xl font-bold mb-2">Données officielles</h3>
-                <p class="text-gray-500 text-sm leading-relaxed font-body">Plus d'hallucinations sur les formations ou les dates de JPO : ton IA interroge directement Orienty.</p>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">Fini les hallucinations sur les formations ou les dates de JPO : ChatGPT consulte les bases de données d'Orienty en temps réel.</p>
             </div>
             <div class="bg-secondary border border-gray-100 rounded-3xl p-8 relative overflow-hidden group hover:shadow-lg transition">
                 <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-2xl shadow-sm mb-4">🎓</div>
                 <h3 class="text-xl font-bold mb-2">Mentors certifiés</h3>
-                <p class="text-gray-500 text-sm leading-relaxed font-body">L'IA accède aux profils vérifiés d'étudiants Orienty pour des retours d'expérience concrets et humains.</p>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">ChatGPT peut trouver et te recommander des profils d'étudiants vérifiés sur Orienty pour échanger en direct.</p>
             </div>
         </section>
 
-        <!-- Section 2 : Installation Clients MCP (Claude & IDE) -->
-        <section id="install" class="space-y-8">
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="bg-pastel-blue/40 text-blue-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">Mise en route</span>
-                <h2 class="text-3xl md:text-4xl font-bold">Comment l'installer ?</h2>
-                <p class="text-gray-500 text-sm font-medium">Ajoute Orienty en moins de deux minutes dans ton client.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                <!-- Claude Desktop -->
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-pastel-orange/40 text-orange-900 rounded-2xl flex items-center justify-center text-2xl">🤖</div>
-                        <div>
-                            <h3 class="font-bold text-xl">Claude Desktop</h3>
-                            <p class="text-xs text-gray-400 font-mono">claude_desktop_config.json</p>
-                        </div>
-                    </div>
-
-                    <p class="text-sm text-gray-600 font-body">Ouvre le fichier de configuration de Claude Desktop (accessible via <em>Paramètres &gt; Développeur &gt; Edit Config</em>) et colle ce bloc :</p>
-
-                    <div class="bg-black text-gray-200 p-5 rounded-2xl text-xs font-mono overflow-x-auto relative group">
-<pre><code>{
-  "mcpServers": {
-    "orienty": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://orienty-mcp.ton-domaine.workers.dev/mcp"
-      ]
-    }
-  }
-}</code></pre>
-                    </div>
-
-                    <p class="text-xs text-gray-400 font-body">💡 Redémarre Claude Desktop : l'icône marteau 🔨 confirmera la disponibilité immédiate des 10 outils Orienty.</p>
-                </div>
-
-                <!-- Cursor / Windsurf / IDE -->
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-pastel-green/40 text-green-900 rounded-2xl flex items-center justify-center text-2xl">💻</div>
-                        <div>
-                            <h3 class="font-bold text-xl">Cursor / Windsurf / IDE</h3>
-                            <p class="text-xs text-gray-400 font-mono">Settings &gt; Features &gt; MCP</p>
-                        </div>
-                    </div>
-
-                    <p class="text-sm text-gray-600 font-body">Ajoute un nouveau serveur MCP distant directement depuis les réglages de ton éditeur :</p>
-
-                    <div class="space-y-3 font-body text-sm">
-                        <div class="p-3 bg-secondary rounded-xl flex items-center justify-between">
-                            <span class="text-gray-500 font-medium">Type</span>
-                            <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border">SSE / Remote HTTP</span>
-                        </div>
-                        <div class="p-3 bg-secondary rounded-xl flex items-center justify-between">
-                            <span class="text-gray-500 font-medium">Nom</span>
-                            <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border">orienty</span>
-                        </div>
-                        <div class="p-3 bg-secondary rounded-xl flex items-center justify-between">
-                            <span class="text-gray-500 font-medium">URL</span>
-                            <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border">https://orienty-mcp.orienty.workers.dev/mcp</span>
-                        </div>
-                    </div>
-
-                    <p class="text-xs text-gray-400 font-body">Aucun compte n'est requis. Notre infrastructure Cloudflare applique automatiquement une protection de quota par IP.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Spécifique : Plugin & Action ChatGPT -->
-        <section id="chatgpt" class="space-y-8">
-            <div class="bg-gradient-to-br from-black via-zinc-900 to-black text-white rounded-[40px] p-8 md:p-12 relative overflow-hidden shadow-xl">
-                <!-- Glow décoratif -->
-                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-pastel-cyan rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
-
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                    <div class="lg:col-span-2 space-y-4 text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-pastel-cyan text-xs font-bold uppercase tracking-wider">
-                            <span>OpenAI Plugins • Custom GPT</span>
-                        </div>
-                        
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
-                            Disponible aussi sur ChatGPT
-                        </h2>
-                        
-                        <p class="text-gray-300 text-sm md:text-base font-body leading-relaxed max-w-2xl">
-                            Orienty est nativement préparé pour le GPT Store et les Custom GPTs. <br> Installe nous en un clic sur ChatGPT.
-                        </p>
-
-                        <div class="pt-2 flex flex-wrap gap-4 items-center">
-                            <a href="https://chatgpt.com/g/g-orienty" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-6 py-3 rounded-xl font-bold text-sm hover:bg-pastel-cyan transition duration-300 inline-flex items-center gap-2">
-                                <span>Ouvrir dans ChatGPT</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3 : Outils disponibles (Bento Grid) -->
+        <!-- Section 2 : Fonctionnalités (Bento Grid) -->
         <section id="tools" class="space-y-8">
             <div class="text-center max-w-2xl mx-auto">
-                <span class="bg-pastel-green/40 text-green-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">Capacités</span>
-                <h2 class="text-3xl md:text-4xl font-bold">10 outils natifs inclus</h2>
-                <p class="text-gray-500 text-sm font-medium">Voici ce que ton assistant IA peut exécuter en temps réel :</p>
+                <span class="bg-pastel-green/40 text-green-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">Fonctionnalités</span>
+                <h2 class="text-3xl md:text-4xl font-bold">Ce que ChatGPT peut faire pour toi</h2>
+                <p class="text-gray-500 text-sm font-medium">Une fois l'extension activée, ChatGPT accède automatiquement à ces services :</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -323,12 +234,12 @@
             </div>
         </section>
 
-        <!-- Section 4 : Exemples de prompts pour l'IA -->
+        <!-- Section 3 : Exemples de prompts pour ChatGPT -->
         <section id="prompts" class="space-y-8">
             <div class="text-center max-w-2xl mx-auto">
                 <span class="bg-pastel-orange/40 text-orange-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">Idées de requêtes</span>
-                <h2 class="text-3xl md:text-4xl font-bold">Que peux-tu lui demander ?</h2>
-                <p class="text-gray-500 text-sm font-medium">Une fois l'outil branché, pose tes questions directement :</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Exemples de questions à poser</h2>
+                <p class="text-gray-500 text-sm font-medium">Une fois l'extension ChatGPT ajoutée, tente ces exemples :</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto font-body">
@@ -358,6 +269,80 @@
                     <p class="text-sm text-gray-700 leading-relaxed">
                         <em>« Quel est le profil des bacheliers qui intègrent une Licence de Droit d'après les retours mentors ? »</em>
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Avancé / MCP (Pour Claude Desktop, Cursor & IDE) -->
+        <section id="install" class="space-y-8 pt-8 border-t border-gray-200">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">Pour les développeurs et experts</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Connexion protocole MCP</h2>
+                <p class="text-gray-500 text-sm font-medium">Tu utilises Claude Desktop, Cursor ou Windsurf ? Branche directement notre serveur MCP distant.</p>
+            </div>
+
+            <!-- URL Endpoint Box -->
+            <div class="max-w-xl mx-auto bg-white border border-gray-200 rounded-2xl p-3 shadow-sm flex items-center justify-between gap-3">
+                <div class="text-left font-mono text-xs sm:text-sm text-gray-600 truncate pl-3" id="endpoint-url">
+                    https://orienty-mcp.orienty.workers.dev/mcp
+                </div>
+                <button onclick="copyEndpoint()" id="copy-btn" class="bg-black text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-accent transition duration-200 flex-shrink-0">
+                    Copier
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <!-- Claude Desktop -->
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-pastel-orange/40 text-orange-900 rounded-2xl flex items-center justify-center text-2xl">🤖</div>
+                        <div>
+                            <h3 class="font-bold text-xl">Claude Desktop</h3>
+                            <p class="text-xs text-gray-400 font-mono">claude_desktop_config.json</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 font-body">Colle ce bloc dans ton fichier de configuration Claude Desktop :</p>
+
+                    <div class="bg-black text-gray-200 p-5 rounded-2xl text-xs font-mono overflow-x-auto relative group">
+<pre><code>{
+  "mcpServers": {
+    "orienty": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://orienty-mcp.orienty.workers.dev/mcp"
+      ]
+    }
+  }
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Cursor / Windsurf / IDE -->
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-pastel-green/40 text-green-900 rounded-2xl flex items-center justify-center text-2xl">💻</div>
+                        <div>
+                            <h3 class="font-bold text-xl">Cursor / Windsurf / IDE</h3>
+                            <p class="text-xs text-gray-400 font-mono">Settings &gt; Features &gt; MCP</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 font-body text-sm">
+                        <div class="p-3 bg-secondary rounded-xl flex items-center justify-between">
+                            <span class="text-gray-500 font-medium">Type</span>
+                            <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border">SSE / Remote HTTP</span>
+                        </div>
+                        <div class="p-3 bg-secondary rounded-xl flex items-center justify-between">
+                            <span class="text-gray-500 font-medium">Nom</span>
+                            <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border">orienty</span>
+                        </div>
+                        <div class="p-3 bg-secondary rounded-xl flex items-center justify-between">
+                            <span class="text-gray-500 font-medium">URL</span>
+                            <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border">https://orienty-mcp.orienty.workers.dev/mcp</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
